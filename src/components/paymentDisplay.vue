@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="list">
     <div class="list-header">
         <p>#</p>
         <p>date</p>
@@ -45,6 +45,9 @@ export default {
 </style>
 
 <style scoped>
+.list{
+    width: 24rem;
+}
  .list-header{
     display: grid;
     grid-template-columns: 3rem 9rem 9rem 9rem;
