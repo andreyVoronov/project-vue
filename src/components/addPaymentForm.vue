@@ -1,7 +1,14 @@
 <template>
-  <div class="form">
-    <input type="number" placeholder="value" v-model="value">
-    <input type="text" placeholder="Type" v-model="category">
+  <div>
+    <input type="number" placeholder="Amount" v-model="value">
+<!--    <input type="text" placeholder="Type" v-model="category">-->
+    <select name="" id="" v-model="category">
+      <option
+          v-for="category of categoryList"
+          :value="category"
+          :key="category"
+      >{{ category }}</option>
+    </select>
     <input type="text" placeholder="Date" v-model="date">
     <button @click="addPayment">Add</button>
   </div>
@@ -10,6 +17,12 @@
 <script>
 export default {
   name: 'AddPaymentForm',
+  props: {
+    categoryList: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
       value: '',
