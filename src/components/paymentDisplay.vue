@@ -8,7 +8,7 @@
     </div>
     <div v-for="(spending, index) in paginatedSpendings" :key="index">
       <div :class="$style.item">
-        <p class="list-index">{{ index + 1 }}</p>
+        <p class="list-index">{{ spending.id }}</p>
         <p class="list-date">{{ spending.date }}</p>
         <p class="list-category">{{ spending.category }}</p>
         <p class="list-value">{{ spending.value }}</p>
