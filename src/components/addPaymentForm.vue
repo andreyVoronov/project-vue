@@ -1,6 +1,13 @@
 <template>
   <div>
-    <button @click="isHidden">Add New spending</button>
+    <div class="top-links">
+      <p>quick links for adding payments</p>
+      <router-link to="/add/payment/Food?value=1000">Food - 1000</router-link>
+      <router-link to="/add/payment/Transport?value=50">Transport - 50</router-link>
+      <router-link to="/add/payment/Entertaiment?value=2000">Entertaiment - 2000</router-link>
+    </div>
+    <router-link to="/add/payment">
+    <button @click="isHidden">Add New spending</button></router-link>
     <div class="" v-show="flag">
       <input type="number" placeholder="Amount" v-model="value">
       <select name="" id="" v-model="category">

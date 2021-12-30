@@ -1,12 +1,6 @@
 <template>
   <div id="app">
     <h1>MY PAYMENTS</h1>
-    <div class="top-links">
-      <p>quick links for adding payments</p>
-      <router-link to="/add/payment/Food?value=1000">Food - 1000</router-link>
-      <router-link to="/add/payment/Transport?value=50">Transport - 50</router-link>
-      <router-link to="/add/payment/Entertaiment?value=2000">Entertaiment - 2000</router-link>
-    </div>
     <addPaymentForm @add-payment="addNewPayment" :categoryList="categoryList"/>
     <paymentDisplay :spendings="paymentsList"/>
   </div>
@@ -41,16 +35,6 @@ export default {
     addNewPayment(payment) {
       this.ADD_PAYMENT_DATA(payment);
     },
-    editPayment() {
-      this.UPDATE_PAYMENT_DATA({
-        date: '28.03.2020',
-        category: 'Food',
-        value: 10000,
-      });
-    },
-    // goToPage(pageName) {
-    // this.$router.push(pageName);
-    // },
   },
   computed: {
     ...mapGetters([
